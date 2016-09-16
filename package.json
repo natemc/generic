@@ -1,0 +1,41 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "bundle": "bundle-dependencies update",
+    "precommit": "standard",
+    "unit": "istanbul cover _mocha",
+    "postunit": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
+    "test": "npm run unit"
+  },
+  "keywords": [],
+  "author": {
+    "name": "David Braun",
+    "email": "David@NodeGuy.com",
+    "url": "https://www.NodeGuy.com/"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "bundle-dependencies": "^1.0.2",
+    "husky": "^0.11.7",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.2",
+    "standard": "^8.0.0"
+  },
+  "standard": {
+    "globals": [
+      "after",
+      "afterEach",
+      "before",
+      "beforeEach",
+      "describe",
+      "it",
+      "run"
+    ]
+  },
+  "dependencies": {
+    "iteray": "^0.3.0"
+  }
+}
