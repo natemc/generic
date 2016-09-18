@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "@nodeguy/generic",
   "version": "0.0.0",
-  "description": "",
+  "description": "generic functions",
   "main": "lib/index.js",
   "scripts": {
     "bundle": "bundle-dependencies update",
@@ -10,13 +10,21 @@
     "postunit": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
     "test": "npm run unit"
   },
-  "keywords": [],
+  "repository": {
+     "type": "git",
+     "url": "git+https://github.com/NodeGuy/generic.git"
+   },
+  "keywords": ["generic", "functions", "methods", "multimethods"],
   "author": {
     "name": "David Braun",
     "email": "David@NodeGuy.com",
     "url": "https://www.NodeGuy.com/"
   },
   "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/NodeGuy/generic/issues"
+  },
+  "homepage": "https://github.com/NodeGuy/generic",
   "devDependencies": {
     "bundle-dependencies": "^1.0.2",
     "husky": "^0.11.7",
@@ -36,6 +44,9 @@
     ]
   },
   "dependencies": {
-    "iteray": "^0.3.0"
-  }
+    "ramda": "^0.22.1"
+  },
+  "bundledDependencies": [
+    "ramda"
+  ]
 }
