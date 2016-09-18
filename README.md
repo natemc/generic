@@ -2,6 +2,10 @@
 
 See `test/index.js` for usage.
 
+# Installation
+
+`$ npm install @nodeguy/generic`
+
 # Copyright
 
 Copyright 2016 [David Braun](https://www.NodeGuy.com/)
