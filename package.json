@@ -1,6 +1,6 @@
 {
   "name": "@nodeguy/generic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "generic functions",
   "main": "lib/index.js",
   "scripts": {
