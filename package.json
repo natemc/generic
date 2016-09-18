@@ -1,6 +1,6 @@
 {
   "name": "@nodeguy/generic",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "generic functions",
   "main": "lib/index.js",
   "scripts": {
@@ -11,10 +11,15 @@
     "test": "npm run unit"
   },
   "repository": {
-     "type": "git",
-     "url": "git+https://github.com/NodeGuy/generic.git"
-   },
-  "keywords": ["generic", "functions", "methods", "multimethods"],
+    "type": "git",
+    "url": "git+https://github.com/NodeGuy/generic.git"
+  },
+  "keywords": [
+    "generic",
+    "functions",
+    "methods",
+    "multimethods"
+  ],
   "author": {
     "name": "David Braun",
     "email": "David@NodeGuy.com",
