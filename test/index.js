@@ -24,7 +24,7 @@ it("includes the function's name in error messages", function () {
 
 it('matches the wildcard character', function () {
   const identity = generic.create()
-  identity.method([_], (x) => x)
+  identity.method(_, (x) => x)
 
   assert.equal(identity('Common Lisp'), 'Common Lisp')
 })
