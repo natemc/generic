@@ -39,6 +39,14 @@ it('matches and returns values', function () {
   assert.equal(fibonacci(13), 233)
 })
 
+it('matches the most recently defined methods first', function () {
+  const orderMatters = generic.create()
+  orderMatters.method(_, false)
+  orderMatters.method(_, true)
+
+  assert(orderMatters())
+})
+
 it('matches with a predicate function', function () {
   const retort = generic.create()
 
