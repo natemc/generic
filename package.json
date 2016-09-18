@@ -4,7 +4,6 @@
   "description": "generic functions",
   "main": "lib/index.js",
   "scripts": {
-    "bundle": "bundle-dependencies update",
     "precommit": "standard",
     "unit": "istanbul cover _mocha",
     "postunit": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
@@ -31,7 +30,6 @@
   },
   "homepage": "https://github.com/NodeGuy/generic",
   "devDependencies": {
-    "bundle-dependencies": "^1.0.2",
     "husky": "^0.11.7",
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
@@ -50,8 +48,5 @@
   },
   "dependencies": {
     "ramda": "^0.22.1"
-  },
-  "bundledDependencies": [
-    "ramda"
-  ]
+  }
 }
