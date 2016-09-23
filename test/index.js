@@ -4,13 +4,24 @@ const assert = require('assert')
 const generic = require('../lib')
 const _ = generic._
 
-it("throws an exception when it doesn't match a pattern", function () {
-  const futile = generic.create()
+describe("throws an exception when it doesn't match a pattern", function () {
+  it('has a specific message for single arguments', function () {
+    const futile = generic.create()
 
-  assert.throws(() =>
-    futile('Why do I bother?'),
-    /No method matches arguments in call to generic function./
-  )
+    assert.throws(() =>
+      futile('Why do I bother?'),
+      /No method matches single argument in call to generic function./
+    )
+  })
+
+  it('has another message for multiple arguments', function () {
+    const futile = generic.create()
+
+    assert.throws(() =>
+      futile('Why', 'do', 'I', 'bother?'),
+      /No method matches 4 arguments in call to generic function./
+    )
+  })
 })
 
 it("includes the function's name in error messages", function () {
@@ -18,7 +29,7 @@ it("includes the function's name in error messages", function () {
 
   assert.throws(() =>
     futile('Why do I bother?'),
-    /No method matches arguments in call to generic function 'futile'./
+    /No method matches single argument in call to generic function 'futile'./
   )
 })
 
@@ -84,7 +95,7 @@ it('fails to match when objects are different lengths', function () {
 
   assert.throws(() =>
     head(1, 2),
-    /No method matches arguments in call to generic function./
+    /No method matches 2 arguments in call to generic function./
   )
 })
 
@@ -136,7 +147,7 @@ it('matches deeply nested structures', function () {
         }
       }
     }),
-    /No method matches arguments./
+    /No method matches 2 arguments in call to generic function./
   )
 })
 
